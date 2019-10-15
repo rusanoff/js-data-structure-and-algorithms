@@ -1,0 +1,23 @@
+{
+  "name": "js-data-structure-and-algorithms",
+  "version": "1.0.0",
+  "description": "###Links to files with code * [Queue](https://github.com/rusanoff/js-data-structure-and-algorithms/tree/master/queue)",
+  "main": "index.js",
+  "scripts": {
+    "start:queue": "ts-node queue/Queue.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rusanoff/js-data-structure-and-algorithms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rusanoff/js-data-structure-and-algorithms/issues"
+  },
+  "homepage": "https://github.com/rusanoff/js-data-structure-and-algorithms#readme",
+  "devDependencies": {
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4"
+  }
+}

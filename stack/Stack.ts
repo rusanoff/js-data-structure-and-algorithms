@@ -22,6 +22,7 @@ class Stack<T> {
   push(value: T) {
     this.items = [value, ...this.items];
     this.first = value;
+    this.length = this.size;
 
     if (this.size === 1) {
       this.last = this.first;
@@ -36,31 +37,17 @@ class Stack<T> {
     const [oldFirst, ...items]: T[] = this.items;
 
     this.items = items;
+    this.first = this.items[0] || null;
+    this.length = this.size;
+
+    if (this.isEmpty()) {
+      this.last = null;
+    }
 
     return oldFirst;
   }
 }
 
-const stack: Stack<string | number> = new Stack();
-
-console.log(stack.isEmpty()); // true
-
-stack.push(1);
-stack.push(2);
-stack.push(3);
-stack.push('123');
-stack.push('true');
-stack.push('false');
-stack.push('');
-
-console.log(stack.isEmpty()); // false
-console.log(stack.size); // 7
-console.log(stack.pop());
-console.log(stack.pop());
-console.log(stack.pop());
-console.log(stack.pop());
-console.log(stack.pop());
-console.log(stack.pop());
-console.log(stack.pop());
-console.log(stack.pop());
-console.log(stack.pop());
+export {
+  Stack,
+};
